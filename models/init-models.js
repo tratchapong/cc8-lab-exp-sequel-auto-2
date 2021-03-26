@@ -16,8 +16,10 @@ function initModels(sequelize) {
   var products = _products(sequelize, DataTypes);
   var suppliers = _suppliers(sequelize, DataTypes);
 
-  orders.belongsTo(customers, { as: "customer", foreignKey: "customer_id"});
-  customers.hasMany(orders, { as: "orders", foreignKey: "customer_id"});
+  // orders.belongsTo(customers, { as: "customer", foreignKey: { name: "customerId", field: 'customer_id'} });
+  orders.belongsTo(customers, { as: "customer", foreignKey: 'customer_id' });
+  // customers.hasMany(orders, { as: "orders", foreignKey: { name: "customerId", field: 'customer_id'} });
+  customers.hasMany(orders, { as: "orders", foreignKey: 'customer_id' });
   employees.belongsTo(departments, { as: "department", foreignKey: "department_id"});
   departments.hasMany(employees, { as: "employees", foreignKey: "department_id"});
   orders.belongsTo(employees, { as: "employee", foreignKey: "employee_id"});

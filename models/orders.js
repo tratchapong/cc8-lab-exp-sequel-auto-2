@@ -11,13 +11,14 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.DATEONLY,
       allowNull: false
     },
-    customer_id: {
+    customerId: {
       type: DataTypes.INTEGER,
       allowNull: false,
       references: {
         model: 'customers',
         key: 'id'
-      }
+      },
+      field: 'customer_id'
     },
     employee_id: {
       type: DataTypes.INTEGER,

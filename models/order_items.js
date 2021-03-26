@@ -20,21 +20,23 @@ module.exports = function(sequelize, DataTypes) {
       allowNull: false,
       defaultValue: 0
     },
-    order_id: {
+    orderId: {
       type: DataTypes.INTEGER,
       allowNull: false,
       references: {
         model: 'orders',
         key: 'id'
-      }
+      },
+      field : 'order_id'
     },
-    product_id: {
+    productId: {
       type: DataTypes.INTEGER,
       allowNull: false,
       references: {
         model: 'products',
         key: 'id'
-      }
+      },
+      field : "product_id"
     }
   }, {
     sequelize,
