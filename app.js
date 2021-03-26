@@ -1,3 +1,4 @@
+// fork from => https://github.com/earth824/cc8-lab-exp-sequel
 const express = require('express');
 const customerRoute = require('./routes/customerRoute');
 const productRoute = require('./routes/productRoute');
