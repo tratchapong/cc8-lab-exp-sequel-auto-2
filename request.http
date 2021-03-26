@@ -4,13 +4,13 @@
 
 # get http://localhost:8000/orders/total-sale
 
-# get http://localhost:8000/orders/4
+get http://localhost:8000/orders/92
 
 post http://localhost:8000/orders/ HTTP/1.1
 Content-Type: application/json
 
 {
-     "customerId" : 2,
+     "customerId" : 1,
      "employeeId" : 2, 
      "items" : [
          {

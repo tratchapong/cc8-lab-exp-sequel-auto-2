@@ -20,13 +20,14 @@ module.exports = function(sequelize, DataTypes) {
       },
       field: 'customer_id'
     },
-    employee_id: {
+    employeeId: {
       type: DataTypes.INTEGER,
       allowNull: true,
       references: {
         model: 'employees',
         key: 'id'
-      }
+      },
+      field : 'employee_id'
     }
   }, {
     sequelize,
